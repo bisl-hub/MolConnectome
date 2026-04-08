@@ -79,7 +79,8 @@ test/original_inputs/
 *.pickle
 figure_dependency/downloaded/
 *.svg
-
+git-config.txt
+작업현황.md
 
 # OS generated files
 .DS_Store
