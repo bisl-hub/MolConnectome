@@ -70,7 +70,9 @@ venv.bak/
 # Data and results
 output\ inspection.xlsx
 temp/
+test/
 test/inputs/
+test/correlation/
 test/original_inputs/
 *.csv
 *.xlsx
@@ -81,6 +83,7 @@ figure_dependency/downloaded/
 *.svg
 git-config.txt
 작업현황.md
+.vscode/settings.json
 
 # OS generated files
 .DS_Store
