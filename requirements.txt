@@ -1,0 +1,12 @@
+httpx
+matplotlib
+networkx
+numpy
+openai
+pandas
+scikit-learn
+scipy
+seaborn
+statannotations
+tqdm
+python-dotenv
