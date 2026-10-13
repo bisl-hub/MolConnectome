@@ -1,0 +1,19 @@
+# Python >= 3.10 (go_enrichment_analysis.py evaluates a `list[str] | ...` annotation at import).
+# Tested with Python 3.13.9 and the versions in the comments.
+# Floors are hard constraints only; the floors themselves are untested.
+
+# --- core: every pipeline step ---
+numpy>=2.0            # tested 2.3.5. CURATED_GENES.npy and the gene-set pickles reference numpy._core (NumPy 2 only)
+pandas>=2.2.2         # tested 2.3.3. first release built against NumPy 2
+scipy>=1.13           # tested 1.17.0. first release built against NumPy 2
+PyYAML                # tested 6.0.3. settings.yaml
+openpyxl              # tested 3.1.5. pandas' engine for every .xlsx read and write
+
+# --- plots: P1 group abundance, stage 2 corr_landscape, stage 5 prioritize_drivers ---
+matplotlib>=3.8.4     # tested 3.10.7. first release built against NumPy 2
+seaborn               # tested 0.13.2. P1 only
+statannotations>=0.7  # tested 0.7.2. P1 only; 0.6 caps seaborn < 0.12 (README: compatibility notes)
+
+# --- GO enrichment: P2 baseline_GO_enrichment, stage 6 over_enrichment (needs internet) ---
+requests>=2.27        # tested 2.32.5. uses requests.exceptions.JSONDecodeError
+fake-useragent        # tested 2.2.0

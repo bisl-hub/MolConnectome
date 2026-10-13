@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the preprint below."
+title: "MolConnectome: interregional molecular connectome reconstruction"
+type: software
+license: GPL-3.0
+repository-code: "https://github.com/bisl-hub/MolConnectome"
+authors:
+  - given-names: Ohhyeon
+    family-names: Kwon
+    affiliation: KAIST
+  - given-names: Uiyun
+    family-names: Kim
+    affiliation: KAIST
+  - given-names: Maree J.
+    family-names: Webster
+    affiliation: Stanley Medical Research Institute
+  - given-names: Sanghyeon
+    family-names: Kim
+    affiliation: Stanley Medical Research Institute
+  - given-names: Doheon
+    family-names: Lee
+    affiliation: KAIST
+preferred-citation:
+  type: article
+  title: "Transcriptomic reconstruction of an interregional molecular connectome in schizophrenia"
+  authors:
+    - given-names: Ohhyeon
+      family-names: Kwon
+      affiliation: KAIST
+    - given-names: Uiyun
+      family-names: Kim
+      affiliation: KAIST
+    - given-names: Maree J.
+      family-names: Webster
+      affiliation: Stanley Medical Research Institute
+    - given-names: Sanghyeon
+      family-names: Kim
+      affiliation: Stanley Medical Research Institute
+    - given-names: Doheon
+      family-names: Lee
+      affiliation: KAIST
+  journal: bioRxiv
+  year: 2026
+  month: 10
+  doi: 10.64898/2026.10.05.756648
+  url: "https://doi.org/10.64898/2026.10.05.756648"

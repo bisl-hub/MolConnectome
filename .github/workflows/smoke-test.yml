@@ -1,0 +1,48 @@
+name: smoke test
+
+# Installs requirements.txt, imports every module and runs macaque steps 1 and 3 on the bundled
+# toy data, then checks the result against the reference numbers in MACAQUE_PIPELINE.md section 6.
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  macaque-toy-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.13"]
+    env:
+      BG: ${{ github.workspace }}/metadata/gene_data/exclude_NT/BACKGROUND_GENES_00.pickle
+      OUT: ${{ runner.temp }}/macaque_out
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install requirements
+        run: pip install -r requirements.txt
+
+      - name: Fill in the settings.yaml placeholders
+        run: |
+          sed -i "s|<YOUR_PROJECT_DIR>|$GITHUB_WORKSPACE|; s|<YOUR_PYTHON_INTERPRETER>|$(which python)|" settings.yaml
+          grep -E '^(project_directory|python_interpreter):' settings.yaml
+
+      - name: Import every module
+        run: python .github/scripts/import_all.py
+
+      - name: Macaque step 1 (directed signalling strength)
+        run: python scripts/macaque_analysis/macaque_oneshot.py "$BG" "$OUT" transformation None 4 mid-rank
+
+      - name: Macaque step 3 (weighted connectivity)
+        run: python scripts/macaque_analysis/macaque_weighted_connectivity.py "$BG" "$OUT" transformation None True
+
+      - name: Compare with the reference numbers
+        run: python .github/scripts/check_macaque_toy.py "$OUT/background_genes_00_transformation"

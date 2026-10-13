@@ -1,0 +1,99 @@
+project_directory: <YOUR_PROJECT_DIR>
+python_interpreter: <YOUR_PYTHON_INTERPRETER>
+
+project_structure_settings:
+  metadata_settings:
+    metadata_directory: metadata
+    macaque_sample_matching_file: macaque_sample_matching_table.csv
+    human_sample_matching_file: human_sample_matching_table.csv
+  expression_settings:
+    macaque_expression_directory: macaque_expression
+    macaque_expression_filename:
+      filtered: expression.csv
+      no_filtered: expression_no_filtered.csv
+    human_expression_directory: human_expression
+    human_expression_filename: expression.csv
+
+gene_set_settings:
+  gene_set_data_dir: gene_data
+  neurotransmission_gene_list: CURATED_GENES.npy
+  neurotransmission_gene_set_source: CURATED_GENE_SET.pickle
+  default_bg_gene_selection: exclude_NT
+  default_bg_source: BACKGROUND_GENES_00.pickle
+
+analysis_results:
+  mq_analysis_save_dir: macaque_analysis_results
+  hsa_analysis_save_dir: human_analysis_results
+
+analysis_global_settings:
+  correlation_permutation_chunk_size: 100
+  max_concurrency: 14
+  log_expression_base: 2.0
+
+macaque_oneshot:
+  correlation_p_value_method: transformation
+  run_seed_stride: 1000
+  correlation_permutation_seed: 424242
+  correlation_n_permutations: 1000
+  quantile_bg_rng_seed: 20260708
+  quantile_bg_n_null_samples: 1000
+
+macaque_all_gene_correlation:
+  all_gene_result_save_dir: whole_transcriptome
+
+human_oneshot:
+  correlation_p_value_method: transformation
+  run_seed_stride: 1000
+  correlation_permutation_seed: 424242
+  correlation_n_permutations: 1000
+  quantile_bg_rng_seed: 20260708
+  quantile_bg_n_null_samples: 1000
+
+human_label_shuffle_wrapper:
+  n_label_shuffles: 10
+  process_wait_interval: 20
+  log_filename: label_shuffle_wrapper_log.txt
+  initial_job_name: 10_shuffle_20261006
+  unshuffled_dir_name: unshuffled
+
+human_delta_quantile_report:
+  report_save_dir: label_shuffle_summary
+  delta_quantile_report_filename: delta_quantile_report.csv
+  delta_quantile_flagged_filename: delta_quantile_flagged.csv
+  hypoactive_quantile_threshold: 0.05
+  hyperactive_quantile_threshold: 0.95
+  structural_zero_epsilon: 1.0e-8
+
+human_group_abundance_compare:
+  report_save_dir: group_abundance_comparison
+  stats_filename: group_abundance_stats.csv
+  plot_filename: individual_abundance_boxplots.png
+
+human_corr_contrib:
+  report_save_dir: corr_contrib
+  gene_pair_filename: gene_pair_contribution.csv.gz
+  gene_rollup_filename: gene_contribution_rollup.csv
+  gene_pair_diff_filename: gene_pair_contribution_diff.csv.gz
+  gene_rollup_diff_filename: gene_contribution_diff.csv
+
+human_corr_landscape:
+  report_save_dir: corr_landscape
+  gene_pair_filename: gene_pair_contribution_full.csv.gz
+  gene_rollup_filename: gene_contribution_rollup_full.csv
+  gene_pair_diff_filename: gene_pair_contribution_diff_full.csv.gz
+  gene_rollup_diff_filename: gene_contribution_diff_full.csv
+  contribution_curve_filename: cumulative_contribution_curve.csv
+  diff_curve_filename: cumulative_diff_curve.csv
+  plot_filename: cumulative_contribution_plot.png
+
+human_prioritize_drivers:
+  top_quantile: 0.3
+  output_filename: driver_gene_prioritization.csv
+
+human_over_enrichment:
+  report_save_dir: go_enrichment
+  baseline_save_dir: GO_baseline
+  driver_gene_csv: driver_gene_prioritization.csv
+
+human_donor_split:
+  report_save_dir: donor_splits

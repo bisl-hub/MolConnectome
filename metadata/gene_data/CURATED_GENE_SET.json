@@ -1,0 +1,239 @@
+{
+  "Curated_DA": {
+    "cat1": [
+      "DRD1",
+      "DRD2",
+      "DRD3",
+      "DRD4",
+      "DRD5",
+      "NTSR1",
+      "NTSR2"
+    ],
+    "cat2": [
+      "COMT",
+      "DBH",
+      "DDC",
+      "MAOA",
+      "MAOB",
+      "SLC18A1",
+      "SLC18A2",
+      "SLC6A2",
+      "SLC6A3",
+      "TH",
+      "NLN",
+      "NTS"
+    ]
+  },
+  "Curated_5-HT": {
+    "cat1": [
+      "HTR1A",
+      "HTR1B",
+      "HTR1D",
+      "HTR1E",
+      "HTR1F",
+      "HTR2A",
+      "HTR2B",
+      "HTR2C",
+      "HTR3A",
+      "HTR3B",
+      "HTR3C",
+      "HTR3D",
+      "HTR3E",
+      "HTR4",
+      "HTR5A",
+      "HTR6",
+      "HTR7"
+    ],
+    "cat2": [
+      "AANAT",
+      "ALDH1A1",
+      "ALDH2",
+      "DDC",
+      "MAOA",
+      "MAOB",
+      "SLC18A1",
+      "SLC18A2",
+      "SLC29A4",
+      "SLC6A4",
+      "TPH1",
+      "TPH2"
+    ]
+  },
+  "Curated_Glu": {
+    "cat1": [
+      "GRIA1",
+      "GRIA2",
+      "GRIA3",
+      "GRIA4",
+      "GRIK1",
+      "GRIK2",
+      "GRIK3",
+      "GRIK4",
+      "GRIK5",
+      "GRIN1",
+      "GRIN2A",
+      "GRIN2B",
+      "GRIN2C",
+      "GRIN2D",
+      "GRIN3A",
+      "GRIN3B",
+      "GRM1",
+      "GRM2",
+      "GRM3",
+      "GRM4",
+      "GRM5",
+      "GRM6",
+      "GRM7",
+      "GRM8"
+    ],
+    "cat2": [
+      "GLS",
+      "SLC17A6",
+      "SLC17A7",
+      "SLC17A8"
+    ]
+  },
+  "Curated_GABA": {
+    "cat1": [
+      "GABBR1",
+      "GABBR2",
+      "GABRA1",
+      "GABRA2",
+      "GABRA3",
+      "GABRA4",
+      "GABRA5",
+      "GABRA6",
+      "GABRB1",
+      "GABRB2",
+      "GABRB3",
+      "GABRG1",
+      "GABRG2",
+      "GABRG3"
+    ],
+    "cat2": [
+      "GAD1",
+      "GAD2",
+      "SLC32A1"
+    ]
+  },
+  "Curated_NE": {
+    "cat1": [
+      "ADRA1A",
+      "ADRA1B",
+      "ADRA1D",
+      "ADRA2A",
+      "ADRA2B",
+      "ADRA2C",
+      "ADRB1",
+      "ADRB2",
+      "ADRB3"
+    ],
+    "cat2": [
+      "COMT",
+      "DBH",
+      "DDC",
+      "MAOA",
+      "MAOB",
+      "SLC18A1",
+      "SLC18A2",
+      "SLC6A2",
+      "TH"
+    ]
+  },
+  "Curated_ACh": {
+    "cat1": [
+      "CHRM1",
+      "CHRM2",
+      "CHRM3",
+      "CHRM4",
+      "CHRM5",
+      "CHRNA1",
+      "CHRNA10",
+      "CHRNA2",
+      "CHRNA3",
+      "CHRNA4",
+      "CHRNA5",
+      "CHRNA6",
+      "CHRNA7",
+      "CHRNA9",
+      "CHRNB1",
+      "CHRNB2",
+      "CHRNB3",
+      "CHRNB4",
+      "CHRND",
+      "CHRNE",
+      "CHRNG"
+    ],
+    "cat2": [
+      "ACHE",
+      "BCHE",
+      "CHAT",
+      "SLC18A3",
+      "SLC44A1",
+      "SLC44A2",
+      "SLC44A3",
+      "SLC44A4",
+      "SLC44A5",
+      "SLC5A7"
+    ]
+  },
+  "Curated_Gly": {
+    "cat1": [
+      "GLRA1",
+      "GLRA2",
+      "GLRA3",
+      "GLRA4",
+      "GLRB"
+    ],
+    "cat2": [
+      "AMT",
+      "DLD",
+      "GCSH",
+      "GLDC",
+      "SHMT1",
+      "SHMT2",
+      "SLC32A1",
+      "SLC38A5",
+      "SLC6A5",
+      "SLC6A9"
+    ]
+  },
+  "Curated_epi": {
+    "cat1": [
+      "ADRA1A",
+      "ADRA1B",
+      "ADRA1D",
+      "ADRA2A",
+      "ADRA2B",
+      "ADRA2C",
+      "ADRB1",
+      "ADRB2",
+      "ADRB3"
+    ],
+    "cat2": [
+      "COMT",
+      "DBH",
+      "DDC",
+      "MAOA",
+      "MAOB",
+      "PNMT",
+      "SLC18A1",
+      "SLC18A2",
+      "TH"
+    ]
+  },
+  "Curated_Syn": {
+    "cat1": [
+      "NLGN1",
+      "NLGN2",
+      "NLGN3",
+      "NLGN4X",
+      "NLGN4Y"
+    ],
+    "cat2": [
+      "NRXN1",
+      "NRXN2",
+      "NRXN3"
+    ]
+  }
+}
