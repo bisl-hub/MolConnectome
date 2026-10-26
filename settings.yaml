@@ -97,3 +97,20 @@ human_over_enrichment:
 
 human_donor_split:
   report_save_dir: donor_splits
+
+llm_benchmarking:
+  llm_benchmarking_dir: llm_benchmarking
+  api_key: <YOUR_API_KEY>
+  base_url: <YOUR_API_BASE_URL>
+  model_id: openai/gpt-oss-120b
+  reasoning_effort: high
+  input_dirname: inputs
+  data_file_name: bionli_augmented_400.csv
+  results_dirname: results
+  result_file_suffix: all_predictions_400.csv
+  system_prompt_file_name: system_prompt.txt
+  n_threads: 512
+  random_seed: 20260310
+  max_trials: 5
+  eval_metrics_file_name: llm_eval_metrics.csv
+  eval_model_label: gpt-oss-120b-high-reasoning

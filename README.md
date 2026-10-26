@@ -23,12 +23,14 @@ This repository accompanies the preprint listed under [Citation](#citation).
 ├── metadata/                      sample-matching tables, gene list, gene sets, background panels
 ├── macaque_expression/            toy data: 15 monkeys, 15 regions
 ├── human_expression/              toy data: 61 donors from 3 public cohorts
+├── llm_benchmarking/              LLM benchmark: prompt, 400 labelled pairs, gpt-oss-120b predictions
 └── scripts/
     ├── src/                       shared code: loaders, correlation, null quantiles, abundance
     ├── macaque_analysis/          macaque steps 1-3, plus the optional all-gene correlation
     ├── human_analysis/            human stage 1 (label-shuffle wrapper and its 3 steps) and stage 3
     │   └── downstream_analysis/   human stages 2, 4, 5 and 6
-    └── prerequisite/              human P1 (group abundance), P2 (GO baseline), donor splits
+    ├── prerequisite/              human P1 (group abundance), P2 (GO baseline), donor splits
+    └── llm_benchmarking/          LLM benchmark: model requests, metrics, summary table
 ```
 
 Results go to `macaque_analysis_results/` and `human_analysis_results/`. Both are created on the
@@ -57,6 +59,8 @@ python_interpreter: <YOUR_PYTHON_INTERPRETER>  # absolute path of your python ex
   its own location. It then builds all input and output paths from `project_directory`.
 - **Who needs `python_interpreter`:** only the human label-shuffle wrapper, which starts its
   subprocesses with it.
+- **LLM benchmark only:** `llm_benchmarking.api_key` and `base_url` point to an OpenAI-compatible
+  endpoint. See [LLM_BENCHMARKING.md](LLM_BENCHMARKING.md).
 
 ## Quick start (toy data)
 
@@ -81,6 +85,7 @@ python scripts/macaque_analysis/macaque_weighted_connectivity.py  # step 3: abun
 | [MACAQUE_PIPELINE.md](MACAQUE_PIPELINE.md) | macaque steps, arguments, outputs, reference run |
 | [HUMAN_PIPELINE.md](HUMAN_PIPELINE.md) | human stages and their dependencies, arguments, outputs, reference run |
 | [TOY_DATA.md](TOY_DATA.md) | what the bundled toy data contain, and their limits |
+| [LLM_BENCHMARKING.md](LLM_BENCHMARKING.md) | LLM benchmark: data, request settings, how to run, metrics |
 
 ## Toy data
 

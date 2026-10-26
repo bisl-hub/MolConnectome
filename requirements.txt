@@ -17,3 +17,8 @@ statannotations>=0.7  # tested 0.7.2. P1 only; 0.6 caps seaborn < 0.12 (README: 
 # --- GO enrichment: P2 baseline_GO_enrichment, stage 6 over_enrichment (needs internet) ---
 requests>=2.27        # tested 2.32.5. uses requests.exceptions.JSONDecodeError
 fake-useragent        # tested 2.2.0
+
+# --- LLM benchmarking: scripts/llm_benchmarking/ (needs an OpenAI-compatible endpoint) ---
+openai                # tested 2.26.0
+httpx                 # tested 0.28.1
+scikit-learn          # tested 1.8.0. check_metrics.py

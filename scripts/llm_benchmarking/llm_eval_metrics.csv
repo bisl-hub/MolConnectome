@@ -1,0 +1,4 @@
+Model ID	Accuracy	Precision	Recall
+gemini-3-pro-preview-11-2025-high	0.945	0.9477	0.945
+gpt-oss-120b-high-reasoning	0.8975	0.9037	0.8974
+deepseek-v3.2-thinking	0.85	0.8731	0.8498
